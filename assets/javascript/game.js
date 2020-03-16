@@ -56,11 +56,14 @@ const doTheStuff = () => {
         console.log(userGuess);
         
         if (alph.includes(userGuess)  ) {
+
             for (let j = 0; j < randoKey.answer.length; j++) {
                 if (userGuess === randoKey.answer[j]) {
-                    string += userGuess;
+                    randoKey.answer[j].innerHTML = userGuess;
                     console.log(string);
                 }
+
+                guessesRemaining--;
             }
         }  
     }
